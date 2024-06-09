@@ -21,14 +21,24 @@
     </style>
   </head>
   <body>
+    <div style="display: flexbox; bottom: 10%;">
     <button onclick="wsavc.send('key', 24)">Vol+</button>
     <button onclick="wsavc.send('key', 25)">Vol-</button>
     <button onclick="wsavc.send('key', 164)">Mute</button>
     <button onclick="wsavc.send('key', 3)">Home</button>
     <button onclick="wsavc.send('key', 4)">Back</button>
     <button onclick="wsavc.send('key', 26)">Power</button>
+  </div>
     <br />
-    <pre style="position: absolute; top: 50px; left: 0; background: #fff">
+    <div style="display: flexbox; bottom: 10%;"></div>
+    <button onclick="wsavc.send('key', 19)">UP</button>
+    <button onclick="wsavc.send('key', 20)">DOWN</button>
+    <button onclick="wsavc.send('key', 21)">LEFT</button>
+    <button onclick="wsavc.send('key', 22)">RIGHT</button>
+    </div>
+    <br />
+    <!--
+    <pre style="position: absolute; top: 100px; left: 0; background: #fff">
       UP: 19,
       DOWN: 20,
       LEFT: 21,
@@ -45,6 +55,7 @@
       TV: 170,
       POWER: 26,
     </pre>
+  -->
     <div id="video-box"></div>
     <input type="text" style="font-family: monospace" id="command" />
     <script type="text/javascript" src="WSAvcPlayer.js"></script>
@@ -57,7 +68,7 @@
           window.innerWidth / 5000,
           window.innerHeight / 3000
         );
-        videoBox.style.left = `${1434 * scale}px`;
+        videoBox.style.left = `${10 * scale}px`;
         videoBox.style.top = `${699 * scale}px`;
         videoBox.style.width = `${2125 * scale}px`;
         videoBox.style.height = `${(2125 * scale) / (16 / 9)}px`;
