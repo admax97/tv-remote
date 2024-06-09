@@ -3,7 +3,7 @@ const { runAdb } = require("./adb");
 const { createServer } = require("./server");
 
 const config = {
-  deviceIp: "192.168.178.20",
+  deviceIp: "192.168.31.34",
   feedPort: 8091,
   feedIp: "127.0.0.1",
   hostname: "0.0.0.0",
